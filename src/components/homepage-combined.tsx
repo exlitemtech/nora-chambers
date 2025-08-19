@@ -425,8 +425,7 @@ export default function HomepageCombined() {
                       src={partner.image}
                       alt={partner.name}
                       fill
-                      className="object-contain p-8"
-                      style={{ transform: 'scale(1.3)'}}
+                      className="absolute bottom-0"
                     />
                   </div>
                   <div className="p-6 text-center">
