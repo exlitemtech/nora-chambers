@@ -424,10 +424,9 @@ export default function HomepageCombined() {
                     <Image
                       src={partner.image}
                       alt={partner.name}
-                      width={100}
-                      height={100}
-                      className="object-contain p-8 w-full"
-                      style={{ transform: 'scale(1.5)'}}
+                      fill
+                      className="object-contain p-8"
+                      style={{ transform: 'scale(1.3)'}}
                     />
                   </div>
                   <div className="p-6 text-center">
