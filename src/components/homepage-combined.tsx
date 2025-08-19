@@ -94,7 +94,7 @@ export default function HomepageCombined() {
     {
       name: 'Shouryendu Ray',
       title: 'Partner',
-      image: '/pictures/partners/sray.svg',
+      image: '/pictures/partners/sray.webp',
       specialization: 'Corporate Advisory & Aviation Law',
       bio: 'Dual-qualified attorney (New York and India) with expertise in corporate advisory and commercial litigation, recognized in Business World Legal\'s "40 under 40" list.',
       education: [
@@ -112,7 +112,7 @@ export default function HomepageCombined() {
     {
       name: 'Neelu Mohan',
       title: 'Partner',
-      image: '/pictures/partners/nm.svg',
+      image: '/pictures/partners/nm.webp',
       specialization: 'Commercial Litigation & Arbitration',
       bio: 'Advocate-on-Record with the Supreme Court of India, specializing in commercial litigation, arbitration, and regulatory advisory matters with expertise in infrastructure and oil & gas disputes.',
       education: [
@@ -129,7 +129,7 @@ export default function HomepageCombined() {
     {
       name: 'Dr. Manas S. Ray',
       title: 'Partner',
-      image: '/pictures/partners/msray.svg',
+      image: '/pictures/partners/msray.webp',
       specialization: 'Direct Tax, Securities Law & Financial Regulation',
       bio: 'Former Chief Commissioner of Income Tax (IRS) and Executive Director of SEBI, specializing in direct tax, international taxation, transfer pricing, securities law, and financial regulation matters.',
       education: [
@@ -144,6 +144,33 @@ export default function HomepageCombined() {
         'Director of International Taxation',
         'Indian Revenue Service (1985 batch)'
       ]
+    }
+  ]
+
+  const associates = [
+    {
+      name: 'Senior Associate',
+      title: 'Senior Associate',
+      specialization: 'Corporate Law & Litigation',
+      bio: 'Experienced legal professional with expertise in corporate advisory and commercial litigation matters.',
+      icon: Users,
+      description: 'Senior associates bring extensive experience and specialized knowledge to complex legal matters.'
+    },
+    {
+      name: 'Associate',
+      title: 'Associate',
+      specialization: 'Regulatory & Compliance',
+      bio: 'Skilled legal practitioner focused on regulatory compliance and advisory services.',
+      icon: Users,
+      description: 'Associates handle a wide range of legal matters with precision and attention to detail.'
+    },
+    {
+      name: 'Junior Associate',
+      title: 'Junior Associate',
+      specialization: 'Research & Documentation',
+      bio: 'Emerging legal talent contributing to research, documentation, and client support.',
+      icon: Users,
+      description: 'Junior associates provide valuable support in legal research and case preparation.'
     }
   ]
 
@@ -311,7 +338,7 @@ export default function HomepageCombined() {
       </section>
 
       {/* Services Section */}
-      <section id="services" className="py-24">
+      <section id="services" className="py-24 bg-gradient-to-br from-primary/10 to-accent/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial="initial"
@@ -393,12 +420,14 @@ export default function HomepageCombined() {
                 className="group cursor-pointer"
               >
                 <div className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 group-hover:-translate-y-2">
-                  <div className="relative h-96 bg-accent">
+                  <div className="relative overflow-hidden h-96 bg-accent">
                     <Image
                       src={partner.image}
                       alt={partner.name}
-                      fill
-                      className="object-contain p-8"
+                      width={100}
+                      height={100}
+                      className="object-contain p-8 w-full"
+                      style={{ transform: 'scale(1.5)'}}
                     />
                   </div>
                   <div className="p-6 text-center">
@@ -420,9 +449,84 @@ export default function HomepageCombined() {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="text-center mt-12"
           >
-            <Link href="/about">
+            <Link href="/about#partners">
               <Button size="lg" variant="outline">
                 Learn More About Our Partners
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </Button>
+            </Link>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Associates Section */}
+      <section id="associates" className="py-24 bg-gradient-to-br from-primary/10 to-accent/10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl md:text-5xl font-serif font-bold text-gray-900 mb-4">
+              Our Associates
+            </h2>
+            <p className="text-xl text-gray-600">
+              Talented legal professionals supporting our practice
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12">
+            {associates.map((associate, index) => {
+              const IconComponent = associate.icon;
+              return (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 50 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  className="group cursor-pointer"
+                >
+                  <div className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 group-hover:-translate-y-2 border border-gray-100">
+                    <div className="relative h-64 bg-accent flex items-center justify-center">
+                      <div className="w-24 h-24 bg-white rounded-full flex items-center justify-center shadow-lg">
+                        <IconComponent className="w-12 h-12 text-primary" />
+                      </div>
+                      <div className="absolute -bottom-4 -right-4 w-32 h-32 bg-primary/5 rounded-full blur-2xl"></div>
+                    </div>
+                    
+                    <div className="p-6">
+                      <h3 className="text-2xl font-serif font-bold text-gray-900 mb-2">
+                        {associate.name}
+                      </h3>
+                      <p className="text-lg text-primary font-medium mb-3">
+                        {associate.specialization}
+                      </p>
+                      <p className="text-gray-600 mb-4 leading-relaxed">
+                        {associate.bio}
+                      </p>
+                      <p className="text-sm text-gray-500 italic">
+                        {associate.description}
+                      </p>
+                    </div>
+                  </div>
+                </motion.div>
+              );
+            })}
+          </div>
+          
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            className="text-center mt-12"
+          >
+            <Link href="/about#associates">
+              <Button size="lg" variant="outline">
+                Learn More About Our Associates
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
             </Link>

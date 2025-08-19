@@ -4,7 +4,7 @@ import { motion } from 'framer-motion'
 import Image from 'next/image'
 import Navigation from '@/components/navigation'
 import Footer from '@/components/footer'
-import { Mail, Linkedin, GraduationCap, Briefcase, Scale } from 'lucide-react'
+import { Mail, Linkedin, GraduationCap, Briefcase, Scale, Users } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 
 export default function About() {
@@ -16,30 +16,29 @@ export default function About() {
 
   const partners = [
     {
-      name: 'Dr. Manas S. Ray',
+      name: 'Shouryendu Ray',
       title: 'Partner',
-      image: '/pictures/partners/1.svg',
-      email: 'manas.ray@norachambers.com',
+      image: '/pictures/partners/3.webp',
+      email: 'shouryendu.ray@norachambers.com',
       linkedin: '#',
-      specialization: 'Direct Tax, Securities Law & Financial Regulation',
-      bio: 'Former Chief Commissioner of Income Tax (IRS) and Executive Director of SEBI, specializing in direct tax, international taxation, transfer pricing, securities law, and financial regulation matters.',
+      specialization: 'Corporate Advisory & Aviation Law',
+      bio: 'Dual-qualified attorney (New York and India) with expertise in corporate advisory and commercial litigation, recognized in Business World Legal\'s "40 under 40" list.',
       education: [
-        'PhD - IGNOU & University of Delhi',
-        'MA - University of Delhi',
-        'LLB - University Law College, Utkal University',
-        'PG Diploma in Securities Law - Govt. Law College, Mumbai'
+        'LLM - University of Pennsylvania (Dean\'s Scholar)',
+        'Certificate in Business & Law - Wharton',
+        'BA, LLB - NUJS'
       ],
       experience: [
-        'Chief Commissioner of Income Tax',
-        'Executive Director, SEBI',
-        'Director of International Taxation',
-        'Indian Revenue Service (1985 batch)'
+        'Head of Dispute Resolution, AsiaWise',
+        'Associate, Pepper Hamilton, Philadelphia/New York',
+        'Chambers of Solicitor General of India',
+        'Associate, Amarchand Mangaldas'
       ]
     },
     {
       name: 'Neelu Mohan',
       title: 'Partner',
-      image: '/pictures/partners/2.svg',
+      image: '/pictures/partners/2.webp',
       email: 'neelu.mohan@norachambers.com',
       linkedin: '#',
       specialization: 'Commercial Litigation & Arbitration',
@@ -56,24 +55,52 @@ export default function About() {
       ]
     },
     {
-      name: 'Shouryendu Ray',
+      name: 'Dr. Manas S. Ray',
       title: 'Partner',
-      image: '/pictures/partners/3.svg',
-      email: 'shouryendu.ray@norachambers.com',
+      image: '/pictures/partners/1.webp',
+      email: 'manas.ray@norachambers.com',
       linkedin: '#',
-      specialization: 'Corporate Advisory & Aviation Law',
-      bio: 'Dual-qualified attorney (New York and India) with expertise in corporate advisory and commercial litigation, recognized in Business World Legal\'s "40 under 40" list.',
+      specialization: 'Direct Tax, Securities Law & Financial Regulation',
+      bio: 'Former Chief Commissioner of Income Tax (IRS) and Executive Director of SEBI, specializing in direct tax, international taxation, transfer pricing, securities law, and financial regulation matters.',
       education: [
-        'LLM - University of Pennsylvania (Dean\'s Scholar)',
-        'Certificate in Business & Law - Wharton',
-        'BA, LLB - NUJS'
+        'PhD - IGNOU & University of Delhi',
+        'MA - University of Delhi',
+        'LLB - University Law College, Utkal University',
+        'PG Diploma in Securities Law - Govt. Law College, Mumbai'
       ],
       experience: [
-        'Head of Dispute Resolution, AsiaWise',
-        'Associate, Pepper Hamilton, Philadelphia/New York',
-        'Chambers of Solicitor General of India',
-        'Associate, Amarchand Mangaldas'
+        'Chief Commissioner of Income Tax',
+        'Executive Director, SEBI',
+        'Director of International Taxation',
+        'Indian Revenue Service (1985 batch)'
       ]
+    }
+  ]
+
+  const associates = [
+    {
+      name: 'Senior Associate',
+      title: 'Senior Associate',
+      specialization: 'Corporate Law & Litigation',
+      bio: 'Experienced legal professional with expertise in corporate advisory and commercial litigation matters.',
+      icon: Users,
+      description: 'Senior associates bring extensive experience and specialized knowledge to complex legal matters.'
+    },
+    {
+      name: 'Associate',
+      title: 'Associate',
+      specialization: 'Regulatory & Compliance',
+      bio: 'Skilled legal practitioner focused on regulatory compliance and advisory services.',
+      icon: Users,
+      description: 'Associates handle a wide range of legal matters with precision and attention to detail.'
+    },
+    {
+      name: 'Junior Associate',
+      title: 'Junior Associate',
+      specialization: 'Research & Documentation',
+      bio: 'Emerging legal talent contributing to research, documentation, and client support.',
+      icon: Users,
+      description: 'Junior associates provide valuable support in legal research and case preparation.'
     }
   ]
 
@@ -170,8 +197,27 @@ export default function About() {
         </div>
       </section>
 
+      {/* Team Section */}
+      <section id="team" className="py-20">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl md:text-5xl font-serif font-bold text-gray-900 mb-6">
+              Our Team
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Meet the exceptional legal professionals who drive our success and deliver outstanding results for our clients
+            </p>
+          </motion.div>
+      </div>
+
       {/* Partners Section */}
-      <section className="py-20">
+      <section id="partners" className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -208,7 +254,7 @@ export default function About() {
                         alt={partner.name}
                         width={400}
                         height={400}
-                        className="rounded-lg shadow-xl"
+                        className="rounded-lg shadow-xl object-cover object-bottom"
                       />
                     </div>
                     <div className="absolute -bottom-4 -right-4 w-72 h-72 bg-primary/5 rounded-full blur-3xl -z-10"></div>
@@ -274,6 +320,80 @@ export default function About() {
         </div>
       </section>
 
+      {/* Associates Section */}
+      <section id="associates" className="py-20 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl md:text-5xl font-serif font-bold text-gray-900 mb-4">
+              Our Associates
+            </h2>
+            <p className="text-xl text-gray-600">
+              Talented legal professionals supporting our practice
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12">
+            {associates.map((associate, index) => {
+              const IconComponent = associate.icon;
+              return (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 50 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  className="group cursor-pointer"
+                >
+                  <div className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 group-hover:-translate-y-2 border border-gray-100">
+                    <div className="relative h-64 bg-gradient-to-br from-primary/10 to-accent/10 flex items-center justify-center">
+                      <div className="w-24 h-24 bg-white rounded-full flex items-center justify-center shadow-lg">
+                        <IconComponent className="w-12 h-12 text-primary" />
+                      </div>
+                      <div className="absolute -bottom-4 -right-4 w-32 h-32 bg-primary/5 rounded-full blur-2xl"></div>
+                    </div>
+                    
+                    <div className="p-6">
+                      <h3 className="text-2xl font-serif font-bold text-gray-900 mb-2">
+                        {associate.name}
+                      </h3>
+                      <p className="text-lg text-primary font-medium mb-3">
+                        {associate.specialization}
+                      </p>
+                      <p className="text-gray-600 mb-4 leading-relaxed">
+                        {associate.bio}
+                      </p>
+                      <p className="text-sm text-gray-500 italic">
+                        {associate.description}
+                      </p>
+                    </div>
+                  </div>
+                </motion.div>
+              );
+            })}
+          </div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            className="text-center mt-12"
+          >
+            <p className="text-gray-600 max-w-2xl mx-auto">
+              Our associates bring diverse expertise and fresh perspectives to every case. 
+              Together with our partners, they form a cohesive team dedicated to delivering 
+              exceptional legal services to our clients.
+            </p>
+          </motion.div>
+        </div>
+      </section>
+      </section>
       <Footer />
     </div>
   )

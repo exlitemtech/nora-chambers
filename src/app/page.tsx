@@ -10,9 +10,11 @@ import Footer from '@/components/footer'
 import VersionSwitcher from '@/components/version-switcher'
 import HomepageCombined from '@/components/homepage-combined'
 import { ArrowRight, Scale, Shield, Users, Award, Building, Gavel, ChevronDown } from 'lucide-react'
+import Disclaimer from '@/components/disclaimer'
+import { useVersion } from '@/contexts/version-context'
 
 export default function Home() {
-  const [version, setVersion] = useState<'original' | 'combined'>('original')
+  const { version } = useVersion()
 
   const fadeInUp = {
     initial: { opacity: 0, y: 60 },
@@ -65,9 +67,10 @@ export default function Home() {
     return (
       <div className="min-h-screen">
         <Navigation />
-        <VersionSwitcher onVersionChange={setVersion} />
+        <VersionSwitcher />
         <HomepageCombined />
         <Footer />
+        <Disclaimer />
       </div>
     )
   }
@@ -75,7 +78,7 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-white">
       <Navigation />
-      <VersionSwitcher onVersionChange={setVersion} />
+      <VersionSwitcher />
       
       {/* Hero Section */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
@@ -287,8 +290,8 @@ export default function Home() {
           </motion.div>
         </div>
       </section>
-
       <Footer />
+      <Disclaimer />
     </div>
   )
 }

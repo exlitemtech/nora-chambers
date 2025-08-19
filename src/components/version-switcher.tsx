@@ -1,30 +1,11 @@
 'use client'
 
-import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
 import { ToggleLeft, ToggleRight } from 'lucide-react'
+import { useVersion } from '@/contexts/version-context'
 
-interface VersionSwitcherProps {
-  onVersionChange: (version: 'original' | 'combined') => void
-}
-
-const VersionSwitcher = ({ onVersionChange }: VersionSwitcherProps) => {
-  const [version, setVersion] = useState<'original' | 'combined'>('original')
-
-  useEffect(() => {
-    const savedVersion = localStorage.getItem('homepage-version') as 'original' | 'combined'
-    if (savedVersion) {
-      setVersion(savedVersion)
-      onVersionChange(savedVersion)
-    }
-  }, [onVersionChange])
-
-  const handleToggle = () => {
-    const newVersion = version === 'original' ? 'combined' : 'original'
-    setVersion(newVersion)
-    localStorage.setItem('homepage-version', newVersion)
-    onVersionChange(newVersion)
-  }
+const VersionSwitcher = () => {
+  const { version, toggleVersion } = useVersion()
 
   return (
     <motion.div
@@ -38,7 +19,7 @@ const VersionSwitcher = ({ onVersionChange }: VersionSwitcherProps) => {
           {version === 'original' ? 'Multi-page' : 'Single-page'}
         </span>
         <button
-          onClick={handleToggle}
+          onClick={toggleVersion}
           className="relative flex items-center transition-colors duration-200"
           aria-label="Toggle homepage version"
         >
