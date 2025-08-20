@@ -2,7 +2,6 @@ import type { Metadata } from 'next'
 import { Open_Sans } from 'next/font/google'
 import './globals.css'
 import { ThemeProvider } from '@/components/theme-provider'
-import { VersionProvider } from '@/contexts/version-context'
 
 const openSans = Open_Sans({ subsets: ['latin'] })
 
@@ -25,9 +24,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <VersionProvider>
             {children}
-          </VersionProvider>
         </ThemeProvider>
       </body>
     </html>

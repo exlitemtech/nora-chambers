@@ -1,21 +1,15 @@
 'use client'
 
-import { useState } from 'react'
 import { motion } from 'framer-motion'
 import Link from 'next/link'
 import Image from 'next/image'
 import { Button } from '@/components/ui/button'
 import Navigation from '@/components/navigation'
 import Footer from '@/components/footer'
-import VersionSwitcher from '@/components/version-switcher'
-import HomepageCombined from '@/components/homepage-combined'
 import { ArrowRight, Scale, Shield, Users, Award, Building, Gavel, ChevronDown } from 'lucide-react'
 import Disclaimer from '@/components/disclaimer'
-import { useVersion } from '@/contexts/version-context'
 
 export default function Home() {
-  const { version } = useVersion()
-
   const fadeInUp = {
     initial: { opacity: 0, y: 60 },
     animate: { opacity: 1, y: 0 },
@@ -63,22 +57,9 @@ export default function Home() {
     },
   ]
 
-  if (version === 'combined') {
-    return (
-      <div className="min-h-screen">
-        <Navigation />
-        <VersionSwitcher />
-        <HomepageCombined />
-        <Footer />
-        <Disclaimer />
-      </div>
-    )
-  }
-
   return (
     <div className="min-h-screen bg-white">
       <Navigation />
-      <VersionSwitcher />
       
       {/* Hero Section */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
@@ -141,20 +122,11 @@ export default function Home() {
               </Button>
             </Link>
           </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 1.2, duration: 0.8 }}
-            className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
-          >
-            <ChevronDown className="w-6 h-6 text-gray-400 animate-bounce" />
-          </motion.div>
         </div>
       </section>
 
       {/* Services Section */}
-      <section className="py-24 bg-gray-50">
+      <section className="py-24 bg-gradient-to-br from-primary/10 to-accent/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial="initial"

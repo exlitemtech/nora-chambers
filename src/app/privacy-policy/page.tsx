@@ -68,7 +68,7 @@ export default function PrivacyPolicy() {
             {/* Introduction */}
             <motion.div variants={fadeInUp} className="mb-12">
               <p className="text-lg text-gray-700 leading-relaxed mb-6">
-                Nora Chambers ("NORA CHAMBERS") is committed to safeguarding the privacy of any person who accesses and uses the website ("User") (www.nora-chambers.com) ("Website") that is owned and operated by NORA CHAMBERS. In this privacy policy, use of the terms "we", "us" and "our" refers to NORA CHAMBERS.
+                Nora Chambers ("NORA CHAMBERS") is committed to safeguarding the privacy of any person who accesses and uses the website ("User") (<a href="https://www.norachambers.in" target="_blank" className="text-primary hover:text-primary/80 font-medium">www.norachambers.in</a>) ("Website") that is owned and operated by NORA CHAMBERS. In this privacy policy, use of the terms "we", "us" and "our" refers to NORA CHAMBERS.
               </p>
               
               <p className="text-lg text-gray-700 leading-relaxed mb-6">
@@ -198,7 +198,6 @@ export default function PrivacyPolicy() {
             {/* Your Rights */}
             <motion.div variants={fadeInUp} className="mb-12">
               <h2 className="text-3xl font-serif font-bold text-gray-900 mb-6 flex items-center">
-                <Users className="w-8 h-8 text-primary mr-3" />
                 7. Your Rights
               </h2>
               <div className="space-y-4">
@@ -242,7 +241,11 @@ export default function PrivacyPolicy() {
                     <Mail className="w-5 h-5 text-primary" />
                     <div>
                       <p className="font-semibold text-gray-900">Email:</p>
-                      <p className="text-gray-700">contact@nora-chambers.com</p>
+                      <p className="text-gray-700">
+                        <a href="mailto:admin@norachambers.in" className="text-gray-700 hover:text-gray-900">
+                          admin@norachambers.in
+                        </a>
+                      </p>
                     </div>
                   </div>
                   <div className="flex items-center space-x-3">

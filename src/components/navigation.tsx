@@ -6,7 +6,6 @@ import { useState, useEffect, useRef } from 'react'
 import { Menu, X, ChevronDown, Phone } from 'lucide-react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { useTheme } from 'next-themes'
-import { useVersion } from '@/contexts/version-context'
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false)
@@ -16,7 +15,6 @@ const Navigation = () => {
   const [expandedItems, setExpandedItems] = useState<string[]>([])
   const [hoveredItem, setHoveredItem] = useState<string | null>(null)
   const dropdownRef = useRef<HTMLDivElement>(null)
-  const { version } = useVersion()
 
   useEffect(() => {
     setMounted(true)
@@ -39,29 +37,13 @@ const Navigation = () => {
     return () => document.removeEventListener('mousedown', handleClickOutside)
   }, [])
 
-  const navItems = (version === 'original') ? [
+  const navItems = [
     { href: '/', label: 'Home' },
     { href: '/about', label: 'About' },
     { href: '/about#team', label: 'Team', 
       children:[
         { href: '/about#partners', label: 'Partners' },
         { href: '/about#associates', label: 'Associates' },
-      ]
-    },
-    { href: '/services', label: 'Services' },
-    { href: '/news', label: 'News' },
-    { href: '/blog', label: 'Blog' },
-    { href: '/careers', label: 'Careers' },
-    { href: '/contact', label: 'Contact' },
-  ] 
-  : 
-  [
-    { href: '/', label: 'Home' },
-    { href: '#about', label: 'About' },
-    { href: '#team', label: 'Team', 
-      children:[
-        { href: '#partners', label: 'Partners' },
-        { href: '#associates', label: 'Associates' },
       ]
     },
     { href: '/services', label: 'Services' },

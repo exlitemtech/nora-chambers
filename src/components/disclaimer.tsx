@@ -53,57 +53,32 @@ export default function Disclaimer() {
               </CardHeader>
               
               <CardContent className="space-y-6 px-8 pb-8">
-                <div className="space-y-4 text-gray-700 leading-relaxed">
-                  <p className="text-base">
+                <div className="space-y-4 text-gray-700 text-base leading-relaxed">
+                  <p>
                     Welcome to Nora Chambers. Before you proceed, please read and acknowledge the following important information:
                   </p>
-                  
-                  <div className="space-y-3 text-sm">
-                    <div className="flex items-start space-x-3">
-                      <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
-                      <p>
-                        <strong>Legal Information Only:</strong> The content on this website is for informational purposes only and does not constitute legal advice.
-                      </p>
-                    </div>
-                    
-                    <div className="flex items-start space-x-3">
-                      <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
-                      <p>
-                        <strong>No Attorney-Client Relationship:</strong> Viewing this website does not create an attorney-client relationship between you and Nora Chambers.
-                      </p>
-                    </div>
-                    
-                    <div className="flex items-start space-x-3">
-                      <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
-                      <p>
-                        <strong>Consultation Required:</strong> For specific legal advice, please schedule a consultation with our legal professionals.
-                      </p>
-                    </div>
-                    
-                    <div className="flex items-start space-x-3">
-                      <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
-                      <p>
-                        <strong>Accuracy:</strong> While we strive for accuracy, legal information may change and should not be relied upon without professional consultation.
-                      </p>
-                    </div>
-                    
-                    <div className="flex items-start space-x-3">
-                      <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
-                      <p>
-                        <strong>Confidentiality:</strong> Information shared through this website is not confidential and should not contain sensitive details.
-                      </p>
-                    </div>
-                  </div>
-                  
-                  <p className="text-base font-medium text-gray-800">
+
+                  <p>
+                    The Bar Council of India does not permit advertisement or solicitation by advocates in any form or manner. By accessing this website, <a href="https://www.norachambers.in" target="_blank" className="text-primary hover:text-primary/80 font-medium">www.norachambers.in</a>, you acknowledge and confirm that you are seeking information relating to Nora Chambers of your own accord and that there has been no form of solicitation, advertisement or inducement by Nora Chambers or its members. The content of this website is for informational purposes only and should not be interpreted as soliciting or advertisement. No material/information provided on this website should be construed as legal advice. Nora Chambers shall not be liable for consequences of any action taken by relying on the material/information provided on this website. The contents of this website are the intellectual property of Nora Chambers.
+                  </p>
+
+                  <p>
                     By clicking "I Agree", you acknowledge that you have read and understood this disclaimer.
                   </p>
 
-                  <p className="text-sm text-gray-600">
-                  Please read and accept our website’s {''}
+                  <p>
+                  Please read and accept our website’s
+                  <Link 
+                      href="/terms-conditions" 
+                      className="text-primary mx-1 hover:text-primary/80 font-medium"
+                      target="_blank"
+                    >
+                      Terms of Use
+                    </Link>
+                    and our
                     <Link 
                       href="/privacy-policy" 
-                      className="text-primary hover:text-primary/80 font-medium"
+                      className="text-primary mx-1 hover:text-primary/80 font-medium"
                       target="_blank"
                     >
                       Privacy Policy
