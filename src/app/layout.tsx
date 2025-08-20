@@ -2,6 +2,8 @@ import type { Metadata } from 'next'
 import { Open_Sans } from 'next/font/google'
 import './globals.css'
 import { ThemeProvider } from '@/components/theme-provider'
+import Navigation from '@/components/navigation'
+import Footer from '@/components/footer'
 
 const openSans = Open_Sans({ subsets: ['latin'] })
 
@@ -24,7 +26,9 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
+            <Navigation />
             {children}
+            <Footer />
         </ThemeProvider>
       </body>
     </html>

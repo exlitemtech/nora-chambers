@@ -4,8 +4,6 @@ import { motion } from 'framer-motion'
 import Link from 'next/link'
 import Image from 'next/image'
 import { Button } from '@/components/ui/button'
-import Navigation from '@/components/navigation'
-import Footer from '@/components/footer'
 import { ArrowRight, Scale, Shield, Users, Award, Building, Gavel, ChevronDown } from 'lucide-react'
 import Disclaimer from '@/components/disclaimer'
 
@@ -58,9 +56,7 @@ export default function Home() {
   ]
 
   return (
-    <div className="min-h-screen bg-white">
-      <Navigation />
-      
+    <div className="min-h-screen bg-white">      
       {/* Hero Section */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
         {/* Background Pattern */}
@@ -262,7 +258,6 @@ export default function Home() {
           </motion.div>
         </div>
       </section>
-      <Footer />
       <Disclaimer />
     </div>
   )

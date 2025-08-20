@@ -23,7 +23,7 @@ export default function PrivacyPolicy() {
   return (
     <div className="min-h-screen bg-white">
       {/* Header */}
-      <section className="bg-gradient-to-r from-primary to-accent text-white py-16">
+      <section className="relative bg-gradient-to-r from-primary to-accent text-white py-16 pt-24">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -55,16 +55,6 @@ export default function PrivacyPolicy() {
             variants={stagger}
             className="prose prose-lg max-w-none"
           >
-            {/* Back Button */}
-            <motion.div variants={fadeInUp} className="mb-8">
-              <Link href="/">
-                <Button variant="outline" className="group">
-                  <ArrowLeft className="w-4 h-4 mr-2 transition-transform group-hover:-translate-x-1" />
-                  Back to Home
-                </Button>
-              </Link>
-            </motion.div>
-
             {/* Introduction */}
             <motion.div variants={fadeInUp} className="mb-12">
               <p className="text-lg text-gray-700 leading-relaxed mb-6">
