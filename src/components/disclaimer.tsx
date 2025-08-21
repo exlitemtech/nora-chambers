@@ -38,26 +38,18 @@ export default function Disclaimer() {
             animate={{ scale: 1, opacity: 1, y: 0 }}
             exit={{ scale: 0.9, opacity: 0, y: 20 }}
             transition={{ duration: 0.3, ease: "easeOut" }}
-            className="w-full max-w-2xl mx-auto"
+            className="w-full max-w-2xl mx-auto overflow-y-auto"
+            style={{ maxHeight: '95%' }}
           >
-            <Card className="border-0 shadow-2xl bg-white relative">
-              <CardHeader className="text-center pb-4 pt-8">
-                <div className="flex justify-center mb-4">
-                  <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center">
-                    <AlertTriangle className="w-8 h-8 text-primary" />
-                  </div>
-                </div>
-                <CardTitle className="text-2xl font-serif font-bold text-gray-900">
+            <Card className="border-0 shadow-2xl bg-white relative rounded-none">
+              <CardHeader className="text-center pb-4 pt-6">
+                <CardTitle className="text-3xl font-serif font-bold text-gray-900">
                     Disclaimer
                 </CardTitle>
               </CardHeader>
               
-              <CardContent className="space-y-6 px-8 pb-8">
-                <div className="space-y-4 text-gray-700 text-base leading-relaxed">
-                  <p>
-                    Welcome to Nora Chambers. Before you proceed, please read and acknowledge the following important information:
-                  </p>
-
+              <CardContent className="space-y-2 px-8">
+                <div className="space-y-2 text-gray-700 text-sm leading-relaxed">
                   <p>
                     The Bar Council of India does not permit advertisement or solicitation by advocates in any form or manner. By accessing this website, <a href="https://www.norachambers.in" target="_blank" className="text-primary hover:text-primary/80 font-medium">www.norachambers.in</a>, you acknowledge and confirm that you are seeking information relating to Nora Chambers of your own accord and that there has been no form of solicitation, advertisement or inducement by Nora Chambers or its members. The content of this website is for informational purposes only and should not be interpreted as soliciting or advertisement. No material/information provided on this website should be construed as legal advice. Nora Chambers shall not be liable for consequences of any action taken by relying on the material/information provided on this website. The contents of this website are the intellectual property of Nora Chambers.
                   </p>
@@ -75,7 +67,7 @@ export default function Disclaimer() {
                     >
                       Terms of Use
                     </Link>
-                    and our
+                    and
                     <Link 
                       href="/privacy-policy" 
                       className="text-primary mx-1 hover:text-primary/80 font-medium"

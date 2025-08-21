@@ -58,7 +58,7 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-white">      
       {/* Hero Section */}
-      <section className="relative h-screen flex items-center justify-center overflow-hidden">
+      <section className="relative pt-24 h-screen flex items-center justify-center overflow-hidden">
         {/* Background Pattern */}
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-accent/5"></div>

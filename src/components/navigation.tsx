@@ -109,7 +109,7 @@ const Navigation = () => {
           </motion.div>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex ml-10 items-baseline" ref={dropdownRef}>
+          <div className="hidden xl:flex ml-10 items-baseline" ref={dropdownRef}>
             <ul className="flex space-x-8">
               {navItems.map((item, index) => (
                 <li key={index} className="relative">
@@ -166,7 +166,7 @@ const Navigation = () => {
           </div>
 
           {/* Contact Numbers - Desktop */}
-          <div className="hidden lg:flex items-center space-x-6">
+          <div className="hidden xl:flex items-center space-x-6">
             <div className="flex items-center space-x-2 text-gray-700 hover:text-primary transition-colors duration-200">
               <Phone className="w-4 h-4" />
               <span className="text-sm font-medium">+91 99538 03458</span>
@@ -174,7 +174,7 @@ const Navigation = () => {
           </div>
 
           {/* Mobile menu button */}
-          <div className="lg:hidden">
+          <div className="xl:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
               className="text-gray-700 hover:text-primary p-2 transition-colors"
@@ -192,7 +192,7 @@ const Navigation = () => {
               animate={{ opacity: 1, height: 'auto' }}
               exit={{ opacity: 0, height: 0 }}
               transition={{ duration: 0.3 }}
-              className="lg:hidden overflow-hidden"
+              className="xl:hidden overflow-hidden"
             >
               <div className="px-2 pt-2 pb-3 bg-white border-t mt-2">
                 <ul className="space-y-2">
