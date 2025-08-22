@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion'
 import Link from 'next/link'
-import { ArrowLeft, FileText } from 'lucide-react'
+import { FileText } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 
 export default function TermsOfUse() {
@@ -36,7 +36,7 @@ export default function TermsOfUse() {
                 <FileText className="w-10 h-10 text-white" />
               </div>
             </div>
-            <h1 className="text-4xl md:text-5xl font-serif font-bold mb-4">
+            <h1 className="text-4xl md:text-5xl font-bold mb-4">
               Terms of Use
             </h1>
             <p className="text-xl opacity-90 max-w-2xl mx-auto">
@@ -57,7 +57,7 @@ export default function TermsOfUse() {
           >
             {/* Terms of Use */}
              <motion.div variants={fadeInUp} className="mb-12">
-              <h2 className="text-3xl font-serif font-bold text-gray-900 mb-6 flex items-center">
+              <h2 className="text-3xl font-bold text-gray-900 mb-6 flex items-center">
                 Terms of Use
               </h2>
               <div className="space-y-4">
@@ -72,7 +72,7 @@ export default function TermsOfUse() {
             
             {/* General Section */}
             <motion.div variants={fadeInUp} className="mb-12">
-              <h2 className="text-3xl font-serif font-bold text-gray-900 mb-6 flex items-center">
+              <h2 className="text-3xl font-bold text-gray-900 mb-6 flex items-center">
                 General
               </h2>
               <div className="space-y-4">
@@ -96,7 +96,7 @@ export default function TermsOfUse() {
 
             {/* Conditions For Use */}
             <motion.div variants={fadeInUp} className="mb-12">
-              <h2 className="text-3xl font-serif font-bold text-gray-900 mb-6 flex items-center">
+              <h2 className="text-3xl font-bold text-gray-900 mb-6 flex items-center">
                 Conditions For Use
               </h2>
               <div className="space-y-4">
@@ -111,7 +111,7 @@ export default function TermsOfUse() {
 
             {/* Confidentiality */}
             <motion.div variants={fadeInUp} className="mb-12">
-              <h2 className="text-3xl font-serif font-bold text-gray-900 mb-6 flex items-center">
+              <h2 className="text-3xl font-bold text-gray-900 mb-6 flex items-center">
                 Confidentiality
               </h2>
               <div className="space-y-4">
@@ -137,7 +137,7 @@ export default function TermsOfUse() {
 
             {/* No Warranties */}
             <motion.div variants={fadeInUp} className="mb-12">
-              <h2 className="text-3xl font-serif font-bold text-gray-900 mb-6 flex items-center">
+              <h2 className="text-3xl font-bold text-gray-900 mb-6 flex items-center">
                 No Warranties
               </h2>
               <div className="space-y-4">
@@ -152,7 +152,7 @@ export default function TermsOfUse() {
 
             {/* No Liability */}
             <motion.div variants={fadeInUp} className="mb-12">
-              <h2 className="text-3xl font-serif font-bold text-gray-900 mb-6 flex items-center">
+              <h2 className="text-3xl font-bold text-gray-900 mb-6 flex items-center">
                 No Liability
               </h2>
               <div className="space-y-4">
@@ -167,7 +167,7 @@ export default function TermsOfUse() {
 
             {/* Termination */}
             <motion.div variants={fadeInUp} className="mb-12">
-              <h2 className="text-3xl font-serif font-bold text-gray-900 mb-6 flex items-center">
+              <h2 className="text-3xl font-bold text-gray-900 mb-6 flex items-center">
                 {/* <Handcuffs className="w-8 h-8 mr-3 text-primary" /> */}
                 Termination
               </h2>
@@ -183,7 +183,7 @@ export default function TermsOfUse() {
 
             {/* Jurisdiction */}
             <motion.div variants={fadeInUp} className="mb-12">
-              <h2 className="text-3xl font-serif font-bold text-gray-900 mb-6 flex items-center">
+              <h2 className="text-3xl font-bold text-gray-900 mb-6 flex items-center">
                 Jurisdiction
               </h2>
               <div className="space-y-4">
@@ -201,7 +201,7 @@ export default function TermsOfUse() {
 
             {/* Investigations */}
             <motion.div variants={fadeInUp} className="mb-12">
-              <h2 className="text-3xl font-serif font-bold text-gray-900 mb-6 flex items-center">
+              <h2 className="text-3xl font-bold text-gray-900 mb-6 flex items-center">
                 Investigations
               </h2>
               <div className="space-y-4">
@@ -213,7 +213,7 @@ export default function TermsOfUse() {
 
             {/* Legal Remedies */}
             <motion.div variants={fadeInUp} className="mb-12">
-              <h2 className="text-3xl font-serif font-bold text-gray-900 mb-6 flex items-center">
+              <h2 className="text-3xl font-bold text-gray-900 mb-6 flex items-center">
                 Legal Remedies
               </h2>
               <div className="space-y-4">
@@ -225,7 +225,7 @@ export default function TermsOfUse() {
 
             {/* Contact Section */}
             <motion.div variants={fadeInUp} className="bg-gradient-to-r from-primary to-accent text-white p-8 rounded-lg text-center">
-              <h2 className="text-2xl font-serif font-bold mb-4">Questions about our Terms of Use?</h2>
+              <h2 className="text-2xl font-bold mb-4">Questions about our Terms of Use?</h2>
               <p className="mb-6 opacity-90">
                 If you have any questions or concerns about these terms, please don't hesitate to contact us.
               </p>

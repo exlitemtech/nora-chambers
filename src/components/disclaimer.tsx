@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
-import { AlertTriangle, CheckCircle } from 'lucide-react'
+import { CheckCircle } from 'lucide-react'
 import Link from 'next/link'
 
 export default function Disclaimer() {
@@ -43,7 +43,7 @@ export default function Disclaimer() {
           >
             <Card className="border-0 shadow-2xl bg-white relative rounded-none">
               <CardHeader className="text-center pb-4 pt-6">
-                <CardTitle className="text-3xl font-serif font-bold text-gray-900">
+                <CardTitle className="text-3xl font-bold text-gray-900">
                     Disclaimer
                 </CardTitle>
               </CardHeader>

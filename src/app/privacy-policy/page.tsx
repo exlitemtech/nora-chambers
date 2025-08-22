@@ -36,7 +36,7 @@ export default function PrivacyPolicy() {
                 <Shield className="w-10 h-10 text-white" />
               </div>
             </div>
-            <h1 className="text-4xl md:text-5xl font-serif font-bold mb-4">
+            <h1 className="text-4xl md:text-5xl font-bold mb-4">
               Privacy Policy
             </h1>
             <p className="text-xl opacity-90 max-w-2xl mx-auto">
@@ -72,7 +72,7 @@ export default function PrivacyPolicy() {
 
             {/* Agreement Section */}
             <motion.div variants={fadeInUp} className="bg-gray-50 p-6 rounded-lg mb-12">
-              <h2 className="text-2xl font-serif font-bold text-gray-900 mb-4">Agreement to Privacy Policy</h2>
+              <h2 className="text-2xl font-bold text-gray-900 mb-4">Agreement to Privacy Policy</h2>
               <p className="text-gray-700 leading-relaxed mb-4">
                 By accessing and using the Website, you accept the terms of, and be bound by this privacy policy. This privacy policy may be updated from time to time at its sole discretion or on account of changes in law. Unless otherwise specified, such revisions shall take effect from the day and date they are posted on the Website. Nora Chambers shall be under no obligation to notify the User about the changes. You are advised to consult this privacy policy regularly for any changes, as your continued access and use of the Website shall be deemed to be your approval and acceptance of all changes to this privacy policy.
               </p>
@@ -83,7 +83,7 @@ export default function PrivacyPolicy() {
 
             {/* How we use Personal Data */}
             <motion.div variants={fadeInUp} className="mb-12">
-              <h2 className="text-3xl font-serif font-bold text-gray-900 mb-6 flex items-center">
+              <h2 className="text-3xl font-bold text-gray-900 mb-6 flex items-center">
                 1. How we use your Personal Data
               </h2>
               
@@ -113,7 +113,7 @@ export default function PrivacyPolicy() {
 
             {/* Access to Information */}
             <motion.div variants={fadeInUp} className="mb-12">
-              <h2 className="text-3xl font-serif font-bold text-gray-900 mb-6 flex items-center">
+              <h2 className="text-3xl font-bold text-gray-900 mb-6 flex items-center">
                 2. Access to Information
               </h2>
               <p className="text-gray-700 leading-relaxed">
@@ -123,7 +123,7 @@ export default function PrivacyPolicy() {
 
             {/* Retention */}
             <motion.div variants={fadeInUp} className="mb-12">
-              <h2 className="text-3xl font-serif font-bold text-gray-900 mb-6 flex items-center">
+              <h2 className="text-3xl font-bold text-gray-900 mb-6 flex items-center">
                 3. Retention of your Personal Data
               </h2>
               <div className="space-y-4">
@@ -141,7 +141,7 @@ export default function PrivacyPolicy() {
 
             {/* Cookies */}
             <motion.div variants={fadeInUp} className="mb-12">
-              <h2 className="text-3xl font-serif font-bold text-gray-900 mb-6 flex items-center">
+              <h2 className="text-3xl font-bold text-gray-900 mb-6 flex items-center">
                 4. Cookies
               </h2>
               <p className="text-gray-700 leading-relaxed">
@@ -151,7 +151,7 @@ export default function PrivacyPolicy() {
 
             {/* Security */}
             <motion.div variants={fadeInUp} className="mb-12">
-              <h2 className="text-3xl font-serif font-bold text-gray-900 mb-6 flex items-center">
+              <h2 className="text-3xl font-bold text-gray-900 mb-6 flex items-center">
                 5. How do we protect your information
               </h2>
               <div className="space-y-4">
@@ -169,7 +169,7 @@ export default function PrivacyPolicy() {
 
             {/* Third Party Disclosures */}
             <motion.div variants={fadeInUp} className="mb-12">
-              <h2 className="text-3xl font-serif font-bold text-gray-900 mb-6 flex items-center">
+              <h2 className="text-3xl font-bold text-gray-900 mb-6 flex items-center">
                 6. Disclosures to third parties
               </h2>
               <div className="space-y-4">
@@ -187,7 +187,7 @@ export default function PrivacyPolicy() {
 
             {/* Your Rights */}
             <motion.div variants={fadeInUp} className="mb-12">
-              <h2 className="text-3xl font-serif font-bold text-gray-900 mb-6 flex items-center">
+              <h2 className="text-3xl font-bold text-gray-900 mb-6 flex items-center">
                 7. Your Rights
               </h2>
               <div className="space-y-4">
@@ -208,7 +208,7 @@ export default function PrivacyPolicy() {
 
             {/* Links to other websites */}
             <motion.div variants={fadeInUp} className="mb-12">
-              <h2 className="text-3xl font-serif font-bold text-gray-900 mb-6 flex items-center">
+              <h2 className="text-3xl font-bold text-gray-900 mb-6 flex items-center">
                 8. Links to other websites
               </h2>
               <p className="text-gray-700 leading-relaxed">
@@ -218,7 +218,7 @@ export default function PrivacyPolicy() {
 
             {/* Grievance Officer */}
             <motion.div variants={fadeInUp} className="mb-12">
-              <h2 className="text-3xl font-serif font-bold text-gray-900 mb-6 flex items-center">
+              <h2 className="text-3xl font-bold text-gray-900 mb-6 flex items-center">
                 9. Who is the Grievance Officer?
               </h2>
               <p className="text-gray-700 leading-relaxed mb-6">
@@ -251,7 +251,7 @@ export default function PrivacyPolicy() {
 
             {/* Contact Section */}
             <motion.div variants={fadeInUp} className="bg-gradient-to-r from-primary to-accent text-white p-8 rounded-lg text-center">
-              <h2 className="text-2xl font-serif font-bold mb-4">Questions about our Privacy Policy?</h2>
+              <h2 className="text-2xl font-bold mb-4">Questions about our Privacy Policy?</h2>
               <p className="mb-6 opacity-90">
                 If you have any questions or concerns about this privacy policy, please don't hesitate to contact us.
               </p>

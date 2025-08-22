@@ -46,10 +46,10 @@ const Navigation = () => {
         { href: '/about#associates', label: 'Associates' },
       ]
     },
-    { href: '/services', label: 'Services' },
-    { href: '/news', label: 'News' },
-    { href: '/blog', label: 'Blog' },
-    { href: '/careers', label: 'Careers' },
+    { href: '/services', label: 'Practice Areas' },
+    // { href: '/news', label: 'News' },
+    // { href: '/blog', label: 'Blog' },
+    // { href: '/careers', label: 'Careers' },
     { href: '/contact', label: 'Contact' },
   ]
 
@@ -101,9 +101,9 @@ const Navigation = () => {
               />
               <div className="hidden md:flex items-center space-x-3">
                 <div className="w-px h-8 bg-gray-300 dark:bg-gray-600"></div>
-                <div className="text-xl font-serif font-bold text-gray-900 dark:text-white">
+                <h3 className="text-xl font-bold text-gray-900 dark:text-white">
                   Nora Chambers
-                </div>
+                </h3>
               </div>
             </Link>
           </motion.div>
