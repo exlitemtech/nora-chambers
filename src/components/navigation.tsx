@@ -6,6 +6,7 @@ import { useState, useEffect, useRef } from 'react'
 import { Menu, X, ChevronDown, Phone } from 'lucide-react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { useTheme } from 'next-themes'
+import FontSwitcher from '@/components/font-switcher'
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false)
@@ -173,6 +174,13 @@ const Navigation = () => {
             </div>
           </div>
 
+          {/* Font Switcher - Desktop */}
+          <div className="hidden xl:flex items-center space-x-6">
+            <div className="flex items-center space-x-2 text-gray-700 hover:text-primary transition-colors duration-200">
+              <FontSwitcher />
+            </div>
+          </div>
+
           {/* Mobile menu button */}
           <div className="xl:hidden">
             <button
@@ -260,9 +268,15 @@ const Navigation = () => {
                 </ul>
                 {/* Contact Numbers - Mobile */}
                 <div className="px-3 py-3 space-y-2">
-                    <div className="flex items-center space-x-2 text-gray-700">
-                      <Phone className="w-4 h-4" />
-                      <span className="text-sm font-medium">+91 99538 03458</span>
+                      <div className="flex items-center space-x-2 text-gray-700">
+                        <Phone className="w-4 h-4" />
+                        <span className="text-sm font-medium">+91 99538 03458</span>
+                    </div>
+                  </div>
+                {/* Font Switcher - Mobile */}
+                <div className="px-3 py-3 space-y-2">
+                      <div className="flex items-center space-x-2 text-gray-700">
+                        <FontSwitcher />
                     </div>
                   </div>
               </div>
