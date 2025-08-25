@@ -1,11 +1,21 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import { Inter, EB_Garamond } from 'next/font/google'
 import './globals.css'
 import { ThemeProvider } from '@/components/theme-provider'
 import Navigation from '@/components/navigation'
 import Footer from '@/components/footer'
 
-const inter = Inter({ subsets: ['latin'] })
+const inter = Inter({ 
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-inter',
+})
+
+const garamond = EB_Garamond({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-garamond',
+})
 
 export const metadata: Metadata = {
   title: 'Nora Chambers - Leading Law Firm in India',
@@ -19,7 +29,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${inter.className} min-h-screen`} suppressHydrationWarning>
+      <body className={`${inter.variable} ${garamond.variable} min-h-screen`} suppressHydrationWarning>
         <ThemeProvider
           attribute="class"
           defaultTheme="light"

@@ -35,13 +35,7 @@ export default function About() {
       {/* Firm Story */}
       <section className="py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-            className="prose prose-lg max-w-none"
-          >
+          <div className="prose prose-lg max-w-none">
             <p className="text-xl text-gray-700 mb-6 leading-relaxed">
               Drawing inspiration from its name, meaning honour and light, Nora Chambers embodies these principles in every aspect of its practice. 
               The firm advises clients across sectors, with particular expertise in the aviation, pharmaceutical, construction and heavy engineering, finance, and SaaS sectors.
@@ -55,7 +49,7 @@ export default function About() {
             <p className="text-lg text-gray-600 leading-relaxed">
               With a focus on responsiveness and professionalism, Nora Chambers is privileged to be a trusted partner to a diverse set of clients ranging from innovative enterprises in frontier industries to storied multinational corporations.
             </p>
-          </motion.div>
+          </div>
         </div>
       </section>
 
