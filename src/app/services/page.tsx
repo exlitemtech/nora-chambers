@@ -73,7 +73,7 @@ export default function Services() {
 
   return (
     <div className="min-h-screen">
-      <div className="pt-24 md:pt-32 pb-12 bg-tertiary">
+      <div className="pt-24 md:pt-32 pb-12 bg-gradient-to-br from-primary/10 to-accent/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h1 className="text-4xl font-bold text-gray-900 mb-4">Areas of Practice</h1>

@@ -31,45 +31,45 @@ export default function Contact() {
     {
       icon: MapPin,
       title: 'Office Address',
-      content: ['New Delhi, India', '(Detailed address available upon request)']
+      content: ['Nora Chambers (Nora Legal Consultants LLP)', 'X-7, Hauz Khas, New Delhi 110016']
     },
     {
       icon: Phone,
       title: 'Phone',
-      content: ['+91 11 XXXX XXXX', '+91 98XXX XXXXX']
+      content: ['+91 11 4107 5982 (Fixed Line)', '+91 99538 03458']
     },
     {
       icon: Mail,
       title: 'Email',
-      content: ['info@norachambers.com', 'legal@norachambers.com']
+      content: ['admin@norachambers.in']
     },
     {
       icon: Clock,
       title: 'Office Hours',
-      content: ['Monday - Friday: 9:00 AM - 6:00 PM', 'Saturday: 10:00 AM - 2:00 PM']
+      content: ['Monday - Saturday: 10:30 AM - 7:30 PM', 'Sunday: Closed']
     }
   ]
 
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="relative pt-24 md:pt-32 pb-16 bg-gradient-to-br from-gray-50 to-white">
+      <section className="relative pt-24 md:pt-32 pb-16 bg-gradient-to-r from-primary to-accent">
         <div className="absolute inset-0 z-0">
           <div className="absolute top-0 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl"></div>
           <div className="absolute bottom-0 left-0 w-96 h-96 bg-accent/5 rounded-full blur-3xl"></div>
         </div>
 
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-white">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center"
           >
-            <h1 className="text-5xl md:text-6xl font-serif font-bold text-gray-900 mb-6">
+            <h1 className="text-5xl md:text-6xl font-serif font-bold mb-6">
               Contact Us
             </h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-xl max-w-3xl mx-auto">
               Get in touch with our experienced legal team for expert counsel and representation
             </p>
           </motion.div>
@@ -77,7 +77,7 @@ export default function Contact() {
       </section>
 
       {/* Contact Information */}
-      <section className="py-16">
+      <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {contactInfo.map((info, index) => (
@@ -96,11 +96,32 @@ export default function Contact() {
                     <CardTitle className="text-lg">{info.title}</CardTitle>
                   </CardHeader>
                   <CardContent>
-                    {info.content.map((line, i) => (
-                      <p key={i} className="text-gray-600 text-sm">
-                        {line}
-                      </p>
-                    ))}
+                    {info.title === 'Phone' ? (
+                      info.content.map((line, i) => {
+                        const phoneNumber = line.includes('+91 11 4107 5982') ? '+911141075982' : '+919953803458'
+                        return (
+                          <p key={i} className="text-gray-600 text-sm">
+                            <a href={`tel:${phoneNumber}`} className="hover:text-primary transition-colors">
+                              {line}
+                            </a>
+                          </p>
+                        )
+                      })
+                    ) : info.title === 'Email' ? (
+                      info.content.map((line, i) => (
+                        <p key={i} className="text-gray-600 text-sm">
+                          <a href={`mailto:${line}`} className="hover:text-primary transition-colors">
+                            {line}
+                          </a>
+                        </p>
+                      ))
+                    ) : (
+                      info.content.map((line, i) => (
+                        <p key={i} className="text-gray-600 text-sm">
+                          {line}
+                        </p>
+                      ))
+                    )}
                   </CardContent>
                 </Card>
               </motion.div>
@@ -110,7 +131,7 @@ export default function Contact() {
       </section>
 
       {/* Map and Contact Form */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-16 bg-gradient-to-br from-primary/10 to-accent/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Map */}
@@ -267,7 +288,7 @@ export default function Contact() {
       </section>
 
       {/* Additional Info */}
-      <section className="py-16">
+      <section className="py-16 bg-gray-50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}

@@ -2,72 +2,13 @@
 
 import { motion } from 'framer-motion'
 import Image from 'next/image'
-import { Mail, Linkedin, GraduationCap, Briefcase } from 'lucide-react'
+import Link from 'next/link'
+import { Mail, Linkedin, GraduationCap, Briefcase, ArrowRight } from 'lucide-react'
 import { Button } from '@/components/ui/button'
+import { getAllPartners } from '@/lib/partnersData'
 
 export default function PartnersSection() {
-  const partners = [
-    {
-      name: 'Shouryendu Ray',
-      title: 'Partner',
-      image: '/pictures/partners/3.webp',
-      email: 'shouryendu.ray@norachambers.com',
-      linkedin: '#',
-      specialization: 'Corporate Advisory & Aviation Law',
-      bio: 'Dual-qualified attorney (New York and India) with expertise in corporate advisory and commercial litigation, recognized in Business World Legal\'s "40 under 40" list.',
-      education: [
-        'LLM - University of Pennsylvania (Dean\'s Scholar)',
-        'Certificate in Business & Law - Wharton',
-        'BA, LLB - NUJS'
-      ],
-      experience: [
-        'Head of Dispute Resolution, AsiaWise',
-        'Associate, Pepper Hamilton, Philadelphia/New York',
-        'Chambers of Solicitor General of India',
-        'Associate, Amarchand Mangaldas'
-      ]
-    },
-    {
-      name: 'Neelu Mohan',
-      title: 'Partner',
-      image: '/pictures/partners/2.webp',
-      email: 'neelu.mohan@norachambers.com',
-      linkedin: '#',
-      specialization: 'Commercial Litigation & Arbitration',
-      bio: 'Advocate-on-Record with the Supreme Court of India, specializing in commercial litigation, arbitration, and regulatory advisory matters with expertise in infrastructure and oil & gas disputes.',
-      education: [
-        'LLM - Columbia University',
-        'BSL, LLB - ILS Law College, University of Pune'
-      ],
-      experience: [
-        'Advocate-on-Record, Supreme Court of India',
-        'Chambers of Mr. Nakul Dewan, Senior Advocate',
-        'Senior Associate, Luthra & Luthra Law Offices',
-        'Associate, Argus Partners'
-      ]
-    },
-    {
-      name: 'Dr. Manas S. Ray',
-      title: 'Partner',
-      image: '/pictures/partners/1.webp',
-      email: 'manas.ray@norachambers.com',
-      linkedin: '#',
-      specialization: 'Direct Tax, Securities Law & Financial Regulation',
-      bio: 'Former Chief Commissioner of Income Tax (IRS) and Executive Director of SEBI, specializing in direct tax, international taxation, transfer pricing, securities law, and financial regulation matters.',
-      education: [
-        'PhD - IGNOU & University of Delhi',
-        'MA - University of Delhi',
-        'LLB - University Law College, Utkal University',
-        'PG Diploma in Securities Law - Govt. Law College, Mumbai'
-      ],
-      experience: [
-        'Chief Commissioner of Income Tax',
-        'Executive Director, SEBI',
-        'Director of International Taxation',
-        'Indian Revenue Service (1985 batch)'
-      ]
-    }
-  ]
+  const partners = getAllPartners()
 
   return (
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -79,11 +20,8 @@ export default function PartnersSection() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-              Our Partners
+              Partners
             </h2>
-            <p className="text-xl text-gray-600">
-              Meet the legal minds behind Nora Chambers
-            </p>
           </motion.div>
 
           <div className="space-y-24">
@@ -154,16 +92,19 @@ export default function PartnersSection() {
                       </ul>
                     </div>
                   </div>
-
                   <div className="flex gap-4">
-                    <Button variant="outline" size="sm" className="group">
-                      <Mail className="w-4 h-4 mr-2" />
-                      Email
-                    </Button>
-                    <Button variant="outline" size="sm" className="group">
-                      <Linkedin className="w-4 h-4 mr-2" />
-                      LinkedIn
-                    </Button>
+                    <a href={`mailto:${partner.email}`}>
+                      <Button variant="outline" size="sm" className="group hover:text-white shadow-lg">
+                        <Mail className="w-4 h-4 mr-2" />
+                        Email
+                      </Button>
+                    </a>
+                    <a href={partner.linkedin} target="_blank" rel="noopener noreferrer">
+                      <Button variant="outline" size="sm" className="group hover:text-white shadow-lg">
+                        <Linkedin className="w-4 h-4 mr-2" />
+                        LinkedIn
+                      </Button>
+                    </a>
                   </div>
                 </div>
               </motion.div>
