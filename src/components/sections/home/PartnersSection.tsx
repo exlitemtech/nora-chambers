@@ -26,7 +26,7 @@ export default function PartnersSection() {
             name: 'Shouryendu Ray',
             title: 'Partner',
             image: '/pictures/partners/sray.webp',
-            specialization: 'Commercial Litigation, Corporate Advisory & Aviation Law',
+            specialization: 'Corporate Advisory & Commercial Litigation',
             slug: 'shouryendu-ray'
         },
         {
