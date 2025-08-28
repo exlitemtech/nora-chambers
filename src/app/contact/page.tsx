@@ -2,8 +2,6 @@
 
 import { useState } from 'react'
 import { motion } from 'framer-motion'
-import Navigation from '@/components/navigation'
-import Footer from '@/components/footer'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { Mail, Phone, MapPin, Clock, Send } from 'lucide-react'
@@ -54,8 +52,6 @@ export default function Contact() {
 
   return (
     <div className="min-h-screen bg-white">
-      <Navigation />
-      
       {/* Hero Section */}
       <section className="relative pt-24 md:pt-32 pb-16 bg-gradient-to-br from-gray-50 to-white">
         <div className="absolute inset-0 z-0">
@@ -290,8 +286,6 @@ export default function Contact() {
           </motion.div>
         </div>
       </section>
-
-      <Footer />
     </div>
   )
 }

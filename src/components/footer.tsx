@@ -38,9 +38,9 @@ const Footer = () => {
                 className="h-12 w-12"
               />
               <div className="w-px h-8 bg-gray-400"></div>
-              <div className="text-xl font-serif font-bold text-white">
+              <h3 className="text-lg font-bold text-white">
                 Nora Chambers
-              </div>
+              </h3>
             </div>
             <p className="text-gray-300 mb-6 text-sm leading-relaxed">
               Award-winning boutique law firm based in New Delhi specialising in dispute resolution and general corporate advisory.
