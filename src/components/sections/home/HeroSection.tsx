@@ -68,7 +68,7 @@ export default function HeroSection() {
                   Leveraging multi-sectoral legal expertise, Nora Chambers delivers comprehensive legal representation and tailored counsel across dispute resolution, corporate advisory, insolvency, intellectual property, securities law, direct tax, and related practice areas.
                 </p>
                 <p>
-                  The firm has earned client recognition for its commitment to delivering clear, actionable legal guidance and its attorneys' innovative problem-solving approach to complex legal challenges.
+                  The firm has earned client recognition for its commitment to delivering clear, actionable legal guidance and its attorneys&apos; innovative problem-solving approach to complex legal challenges.
                 </p>
                 <p>
                   Comprising seasoned partners and accomplished associates, Nora Chambers serves as trusted legal counsel to prominent corporations, handling both high-stakes business disputes and day-to-day legal requirements with equal proficiency.
