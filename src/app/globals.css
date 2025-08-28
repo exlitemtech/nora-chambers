@@ -1,46 +1,18 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Default Font Theme: Inter + Georgia */
+/* CSS Variables for fonts */
+:root {
+  --font-georgia: 'Georgia', serif;
+}
+
 body {
-  font-family: 'Inter', sans-serif;
+  font-family: var(--font-garamond); /* EB Garamond from next/font */
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Georgia', serif;
-}
-
-/* Font Theme 1: Inter + Georgia (Default) */
-body.font-theme-inter {
-  font-family: 'Inter', sans-serif;
-}
-
-body.font-theme-inter h1,
-body.font-theme-inter h2,
-body.font-theme-inter h3,
-body.font-theme-inter h4,
-body.font-theme-inter h5,
-body.font-theme-inter h6,
-body.font-theme-inter .font-serif {
-  font-family: 'Georgia', serif;
-}
-
-/* Font Theme 2: Garamond + Georgia */
-body.font-theme-garamond {
-  font-family: 'EB Garamond', serif;
-}
-
-body.font-theme-garamond h1,
-body.font-theme-garamond h2,
-body.font-theme-garamond h3,
-body.font-theme-garamond h4,
-body.font-theme-garamond h5,
-body.font-theme-garamond h6,
-body.font-theme-garamond .font-serif {
-  font-family: 'Georgia', serif;
+  font-family: var(--font-georgia); /* Georgia fallback */
 }
 
 @layer base {
@@ -95,11 +67,11 @@ body.font-theme-garamond .font-serif {
 }
 
 .font-serif {
-  font-family: 'Georgia', serif;
+  font-family: var(--font-georgia);
 }
 
 .font-sans {
-  font-family: 'Inter', sans-serif;
+  font-family: var(--font-garamond);
 }
 
 .animate-fade-in {

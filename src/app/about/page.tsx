@@ -47,12 +47,12 @@ export default function About() {
               The firm advises clients across sectors, with particular expertise in the aviation, pharmaceutical, construction and heavy engineering, finance, and SaaS sectors.
             </p>
             
-            <p className="text-lg text-gray-600 mb-6 leading-relaxed">
+            <p className="text-xl text-gray-700 mb-6 leading-relaxed">
               Nora Chambers leverages its partners&apos; rich experience and legal expertise to deliver practical, commercially viable solutions. 
               The firm excels in addressing complex legal challenges and developing innovative strategies to resolve emerging legal issues.
             </p>
             
-            <p className="text-lg text-gray-600 leading-relaxed">
+            <p className="text-xl text-gray-700 leading-relaxed">
               With a focus on responsiveness and professionalism, Nora Chambers is privileged to be a trusted partner to a diverse set of clients ranging from innovative enterprises in frontier industries to storied multinational corporations.
             </p>
           </motion.div>
@@ -97,25 +97,6 @@ export default function About() {
         </div>
       </section>
 
-      {/* Team Section */}
-      <section id="team" className="py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
-              className="text-center mb-16"
-            >
-              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-                Our Team
-              </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Meet the exceptional legal professionals who drive our success and deliver outstanding results for our clients
-              </p>
-            </motion.div>
-        </div>
-
         {/* Partners Section */}
         <section id="partners" className="py-20">
           <PartnersSection />
@@ -125,7 +106,6 @@ export default function About() {
         <section id="associates" className="py-20 bg-gray-50">
           <AssociatesSection />
         </section>
-      </section>
     </div>
   )
 }
