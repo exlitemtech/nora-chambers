@@ -5,6 +5,7 @@
 /* CSS Variables for fonts */
 :root {
   --font-georgia: 'Georgia', serif;
+  --font-garamond: 'EB Garamond', 'Garamond', serif;
 }
 
 body {
@@ -12,7 +13,7 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-georgia); /* Georgia fallback */
+  font-family: var(--font-garamond); /* Garamond for all headings */
 }
 
 @layer base {
