@@ -28,6 +28,7 @@ export default function PartnersSection() {
             {partners.map((partner, index) => (
               <motion.div
                 key={index}
+                id={partner.slug}
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}

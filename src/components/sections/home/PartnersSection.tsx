@@ -26,19 +26,22 @@ export default function PartnersSection() {
             name: 'Shouryendu Ray',
             title: 'Partner',
             image: '/pictures/partners/sray.webp',
-            specialization: 'Corporate Advisory & Aviation Law',
+            specialization: 'Commercial Litigation, Corporate Advisory & Aviation Law',
+            slug: 'shouryendu-ray'
         },
         {
             name: 'Neelu Mohan',
             title: 'Partner',
             image: '/pictures/partners/nm.webp',
-            specialization: 'Commercial Litigation & Arbitration'
+            specialization: 'Commercial Litigation & Arbitration',
+            slug: 'neelu-mohan'
         },
         {
             name: 'Dr. Manas S. Ray',
             title: 'Partner',
             image: '/pictures/partners/msray.webp',
-            specialization: 'Direct Tax, Securities Law & Financial Regulation'
+            specialization: 'Direct Tax, Securities Law & Financial Regulation',
+            slug: 'ms-ray'
         }
     ]
 
@@ -52,12 +55,9 @@ export default function PartnersSection() {
                     variants={stagger}
                     className="text-center mb-16"
                 >
-                    <motion.h2 variants={fadeInUp} className="text-4xl md:text-5xl font-bold text-white mb-4">
-                        Our Partners
+                    <motion.h2 variants={fadeInUp} className="text-4xl md:text-5xl font-bold text-white">
+                        Partners
                     </motion.h2>
-                    <motion.p variants={fadeInUp} className="text-xl text-white/90 max-w-3xl mx-auto">
-                        Meet the legal minds behind Nora Chambers
-                    </motion.p>
                 </motion.div>
 
                 <motion.div
@@ -91,29 +91,23 @@ export default function PartnersSection() {
                             </motion.div>
                             <h3 className="text-xl font-semibold text-white mb-2">{partner.name}</h3>
                             <p className="text-sm text-white/70 mb-2">{partner.title}</p>
-                            <p className="text-white/80 text-center max-w-xs">{partner.specialization}</p>
+                            <p className="text-white/80 text-center max-w-xs mb-4">{partner.specialization}</p>
+                            
+                            {/* Learn More Button */}
+                            <Link href={`/team#${partner.slug}`}>
+                                <Button
+                                    size="sm"
+                                    variant="ghost"
+                                    className="text-white hover:bg-white/10"
+                                >
+                                    Learn More
+                                    <ArrowRight className="ml-1 h-4 w-4" />
+                                </Button>
+                            </Link>
                         </motion.div>
                     ))}
                 </motion.div>
 
-                <motion.div
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.8 }}
-                    className="text-center"
-                >
-                    <Link href="/about#partners">
-                        <Button
-                            size="lg"
-                            variant="outline"
-                            className="bg-white text-primary hover:bg-gray-100 border-white"
-                        >
-                            View Details
-                            <ArrowRight className="ml-2 h-4 w-4" />
-                        </Button>
-                    </Link>
-                </motion.div>
             </div>
         </section>
     )

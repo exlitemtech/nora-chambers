@@ -15,10 +15,9 @@ const Footer = () => {
   ]
 
   const quickLinks = [
-    { name: 'About Us', href: '/about' },
-    { name: 'Our Partners', href: '/about#partners' },
-    { name: 'Careers', href: '/careers' },
-    { name: 'News & Insights', href: '/news' },
+    { name: 'About Us', href: '/' },
+    { name: 'Our Team', href: '/team' },
+    { name: 'Awards & Recognition', href: '/awards' },
     { name: 'Contact', href: '/contact' },
   ]
 

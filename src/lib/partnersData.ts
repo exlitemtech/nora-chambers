@@ -9,7 +9,7 @@ const partnersData: Partner[] = [
     email: 'sray@norachambers.in',
     linkedin: 'https://www.linkedin.com/in/shouryenduray/',
     specialization: 'Commercial Litigation, Corporate Advisory & Aviation Law',
-    bio: 'Dual-qualified attorney (New York and India) with expertise in commercial litigation and corporate advisory, focusing on the aviation, tech, and pharma industries; recognized in Business World Legal\'s "40 Under 40" list, named a leading Aviation Law practitioner by the India Business Law Journal (2024 & 2025), and featured among the "Top 10" Legal Consultants in the Pharma & Life Science Industry by India Pharma Outlook. Currently serves as Senior Panel Counsel for the Union of India before the High Court of Delhi.',
+    bio: 'Dual-qualified attorney (New York and India) with expertise in commercial litigation and corporate advisory with a focus on the aviation, tech, and pharma industries; recognized in Business World Legal\'s "40 under 40" list, as a leading Aviation Law practitioner by India Business Law Journal 2024 & 2025, and a "Top 10" Legal Consultants in the Pharma & Life Science Industry by India Pharma Outlook. Serves as Senior Panel Counsel for the Union of India before the High Court of Delhi.',
     education: [
       'LLM - University of Pennsylvania (Dean\'s Scholar)',
       'Certificate in Business & Law - Wharton',

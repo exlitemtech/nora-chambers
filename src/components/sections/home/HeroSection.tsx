@@ -37,6 +37,7 @@ export default function HeroSection() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2, duration: 0.8 }}
             className="text-5xl md:text-7xl font-bold text-gray-900 mb-4"
+            style={{ fontVariant: 'small-caps' }}
           >
             Nora Chambers
           </motion.h1>
@@ -45,19 +46,27 @@ export default function HeroSection() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3, duration: 0.8 }}
-            className="text-2xl md:text-3xl text-gray-700 mb-6"
+            className="text-2xl md:text-3xl text-gray-700 mb-8"
           >
             Trusted relationships. Tailored legal strategy.
           </motion.p>
 
-          <motion.p
+          <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5, duration: 0.8 }}
-            className="text-xl md:text-2xl text-gray-600 mb-8 max-w-3xl mx-auto"
+            className="text-lg text-gray-600 mb-8 max-w-4xl mx-auto space-y-4"
           >
-            Award-winning boutique law firm specializing in dispute resolution and corporate advisory
-          </motion.p>
+            <p>
+              Leveraging multi-sectoral legal expertise, Nora Chambers delivers comprehensive legal representation and tailored counsel across dispute resolution, corporate advisory, insolvency, intellectual property, securities law, direct tax, and related practice areas.
+            </p>
+            <p>
+              The firm has earned client recognition for its commitment to delivering clear, actionable legal guidance and its attorneys' innovative problem-solving approach to complex legal challenges.
+            </p>
+            <p>
+              Comprising seasoned partners and accomplished associates, Nora Chambers serves as trusted legal counsel to prominent corporations, handling both high-stakes business disputes and day-to-day legal requirements with equal proficiency.
+            </p>
+          </motion.div>
 
           <motion.div
             initial={{ opacity: 0, y: 30 }}

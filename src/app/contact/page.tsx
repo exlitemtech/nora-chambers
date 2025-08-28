@@ -15,16 +15,53 @@ export default function Contact() {
     subject: '',
     message: ''
   })
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [submitStatus, setSubmitStatus] = useState<{ type: 'success' | 'error' | null; message: string }>({
+    type: null,
+    message: ''
+  })
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target
     setFormData(prev => ({ ...prev, [name]: value }))
   }
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    // Handle form submission
-    console.log('Form submitted:', formData)
+    setIsSubmitting(true)
+    setSubmitStatus({ type: null, message: '' })
+
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      })
+
+      const data = await response.json()
+
+      if (response.ok) {
+        setSubmitStatus({ type: 'success', message: data.message })
+        // Reset form
+        setFormData({
+          firstName: '',
+          lastName: '',
+          email: '',
+          phone: '',
+          subject: '',
+          message: ''
+        })
+      } else {
+        setSubmitStatus({ type: 'error', message: data.message || 'Failed to send message' })
+      }
+    } catch (error) {
+      console.error('Form submission error:', error)
+      setSubmitStatus({ type: 'error', message: 'An error occurred. Please try again later.' })
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   const contactInfo = [
@@ -143,20 +180,20 @@ export default function Contact() {
               className="relative h-[500px] rounded-lg overflow-hidden shadow-xl"
             >
               <div className="absolute inset-0 bg-gray-200">
-                {/* Placeholder for map - in production, use Google Maps API */}
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d224346.48129412968!2d77.06889969453122!3d28.52728034433088!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfd5b347eb62d%3A0x52c2b7494e204dce!2sNew%20Delhi%2C%20Delhi!5e0!3m2!1sen!2sin!4v1699860823669!5m2!1sen!2sin"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3503.7498901695584!2d77.20657077549897!3d28.552789175705836!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce3ac9af8ec8f%3A0xaecc8a41f15018db!2sNora%20Chambers!5e0!3m2!1sen!2sin!4v1735206741234!5m2!1sen!2sin"
                   width="100%"
                   height="100%"
                   style={{ border: 0 }}
                   allowFullScreen={true}
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
+                  title="Nora Chambers Location Map"
                 ></iframe>
               </div>
               <div className="absolute top-4 left-4 bg-white rounded-lg shadow-lg p-4">
                 <h3 className="font-semibold text-gray-900 mb-1">Nora Chambers</h3>
-                <p className="text-sm text-gray-600">New Delhi, India</p>
+                <p className="text-sm text-gray-600">X-7, Hauz Khas, New Delhi</p>
               </div>
             </motion.div>
 
@@ -275,10 +312,49 @@ export default function Contact() {
                       ></textarea>
                     </div>
 
-                    <Button type="submit" size="lg" className="w-full group">
-                      Send Message
-                      <Send className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                    <Button 
+                      type="submit" 
+                      size="lg" 
+                      className="w-full group"
+                      disabled={isSubmitting}
+                    >
+                      {isSubmitting ? (
+                        <>
+                          Sending...
+                          <div className="ml-2 h-4 w-4 animate-spin rounded-full border-2 border-white border-t-transparent" />
+                        </>
+                      ) : (
+                        <>
+                          Send Message
+                          <Send className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                        </>
+                      )}
                     </Button>
+
+                    {/* Status Messages */}
+                    {submitStatus.type && (
+                      <motion.div
+                        initial={{ opacity: 0, y: 10 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.3 }}
+                        className={`p-4 rounded-md ${
+                          submitStatus.type === 'success' 
+                            ? 'bg-green-50 text-green-800 border border-green-200' 
+                            : 'bg-red-50 text-red-800 border border-red-200'
+                        }`}
+                      >
+                        <p className={`${submitStatus.type === 'success' ? 'text-sm' : 'text-sm font-medium'} leading-relaxed`}>
+                          {submitStatus.message}
+                        </p>
+                        {submitStatus.type === 'success' && (
+                          <div className="mt-3 pt-3 border-t border-green-200">
+                            <p className="text-xs text-green-700">
+                              <strong>Office Hours:</strong> Monday-Saturday, 10:30 AM - 7:30 PM IST
+                            </p>
+                          </div>
+                        )}
+                      </motion.div>
+                    )}
                   </form>
                 </CardContent>
               </Card>
