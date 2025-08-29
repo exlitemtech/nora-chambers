@@ -75,10 +75,10 @@ export default function AwardsPage() {
       </section>
 
       {/* Awards Images Carousel Section */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-16 bg-gray-50 overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div 
-            className="relative"
+            className="relative lg:mx-16"
             onMouseEnter={() => setIsPaused(true)}
             onMouseLeave={() => setIsPaused(false)}
           >
@@ -92,22 +92,53 @@ export default function AwardsPage() {
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
                     transition={{ duration: 0.5 }}
-                    className="absolute inset-0 grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8"
+                    className="absolute inset-0"
                   >
-                    {[...Array(4)].map((_, i) => {
-                      const imageIndex = (currentImageIndex + i) % awards_pics.length
-                      return (
-                        <div key={i} className="relative h-full">
-                          <Image
-                            src={awards_pics[imageIndex]}
-                            alt={`Award_${imageIndex + 1}`}
-                            fill
-                            className="object-contain"
-                            priority
-                          />
-                        </div>
-                      )
-                    })}
+                    {/* Mobile: Show 1 image */}
+                    <div className="block sm:hidden relative h-full">
+                      <Image
+                        src={awards_pics[currentImageIndex]}
+                        alt={`Award_${currentImageIndex + 1}`}
+                        fill
+                        className="object-contain"
+                        priority
+                      />
+                    </div>
+                    
+                    {/* Tablet: Show 2 images */}
+                    <div className="hidden sm:grid sm:grid-cols-2 sm:gap-4 lg:hidden h-full">
+                      {[...Array(2)].map((_, i) => {
+                        const imageIndex = (currentImageIndex + i) % awards_pics.length
+                        return (
+                          <div key={i} className="relative h-full">
+                            <Image
+                              src={awards_pics[imageIndex]}
+                              alt={`Award_${imageIndex + 1}`}
+                              fill
+                              className="object-contain"
+                              priority
+                            />
+                          </div>
+                        )
+                      })}
+                    </div>
+                    
+                    {/* Desktop: Show 4 images */}
+                    <div className="hidden lg:grid lg:grid-cols-4 lg:gap-8 h-full">
+                      {[...Array(4)].map((_, i) => {
+                        const imageIndex = (currentImageIndex + i) % awards_pics.length
+                        return (
+                          <div key={i} className="relative h-full">
+                            <Image
+                              src={awards_pics[imageIndex]}
+                              alt={`Award_${imageIndex + 1}`}
+                              fill
+                              className="object-contain"
+                              priority
+                            />
+                          </div>
+                        )
+                      })}</div>
                   </motion.div>
                 </AnimatePresence>
               </div>
@@ -120,10 +151,10 @@ export default function AwardsPage() {
                 setCurrentImageIndex((prev) => (prev - 1 + awards_pics.length) % awards_pics.length)
                 setTimeout(() => setIsPaused(false), 5000)
               }}
-              className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-12 bg-white rounded-full p-2 shadow-lg hover:bg-gray-100 transition-colors"
+              className="absolute left-2 lg:-left-12 top-1/2 -translate-y-1/2 bg-white rounded-full p-2 shadow-lg hover:bg-gray-100 transition-colors z-10"
               aria-label="Previous awards"
             >
-              <ChevronLeft className="h-6 w-6 text-gray-700" />
+              <ChevronLeft className="h-4 w-4 sm:h-5 sm:w-5 lg:h-6 lg:w-6 text-gray-700" />
             </button>
             <button
               onClick={() => {
@@ -131,10 +162,10 @@ export default function AwardsPage() {
                 setCurrentImageIndex((prev) => (prev + 1) % awards_pics.length)
                 setTimeout(() => setIsPaused(false), 5000)
               }}
-              className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-12 bg-white rounded-full p-2 shadow-lg hover:bg-gray-100 transition-colors"
+              className="absolute right-2 lg:-right-12 top-1/2 -translate-y-1/2 bg-white rounded-full p-2 shadow-lg hover:bg-gray-100 transition-colors z-10"
               aria-label="Next awards"
             >
-              <ChevronRight className="h-6 w-6 text-gray-700" />
+              <ChevronRight className="h-4 w-4 sm:h-5 sm:w-5 lg:h-6 lg:w-6 text-gray-700" />
             </button>
 
             {/* Progress Indicator */}

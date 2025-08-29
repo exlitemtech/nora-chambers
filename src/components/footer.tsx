@@ -98,7 +98,7 @@ const Footer = () => {
               <div className="flex items-start">
                 <span className="font-medium mr-2">Address:</span>
                 <div className="flex-1">
-                  <div className="sm:whitespace-nowrap">Nora Chambers (Nora Legal Consultants LLP)</div>
+                  <div>Nora Chambers (Nora Legal Consultants LLP)</div>
                   <div>X-7, Hauz Khas, New Delhi 110016</div>
                 </div>
               </div>
