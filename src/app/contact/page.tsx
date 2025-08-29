@@ -89,13 +89,7 @@ export default function Contact() {
 
   return (
     <div className="min-h-screen bg-white">
-      {/* Hero Section */}
       <section className="relative pt-24 md:pt-32 pb-16 bg-gradient-to-r from-primary to-accent">
-        <div className="absolute inset-0 z-0">
-          <div className="absolute top-0 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl"></div>
-          <div className="absolute bottom-0 left-0 w-96 h-96 bg-accent/5 rounded-full blur-3xl"></div>
-        </div>
-
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-white">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
