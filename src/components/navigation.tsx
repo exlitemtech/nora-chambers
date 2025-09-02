@@ -38,15 +38,14 @@ const Navigation = () => {
   }, [])
 
   const navItems = [
-    { href: '/', label: 'Home' },
-    { href: '/about', label: 'About' },
-    { href: '/about#team', label: 'Team', 
+    { href: '/', label: 'About' },
+    { href: '/team', label: 'Team', 
       children:[
-        { href: '/about#partners', label: 'Partners' },
-        { href: '/about#associates', label: 'Associates' },
+        { href: '/team#partners', label: 'Partners' },
+        { href: '/team#associates', label: 'Associates' },
       ]
     },
-    { href: '/services', label: 'Practice Areas' },
+    { href: '/practice-areas', label: 'Practice Areas' },
     { href: '/awards', label: 'Awards & Recognition' },
     // { href: '/news', label: 'News' },
     // { href: '/blog', label: 'Blog' },

@@ -15,7 +15,9 @@ export interface Partner {
   linkedin: string
   specialization: string
   bio: string
+  detailedBio?: string[]
   education: string[]
+  barQualifications?: string[]
   experience: string[]
 }
 

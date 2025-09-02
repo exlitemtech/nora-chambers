@@ -15,10 +15,9 @@ const Footer = () => {
   ]
 
   const quickLinks = [
-    { name: 'About Us', href: '/about' },
-    { name: 'Our Partners', href: '/about#partners' },
-    { name: 'Careers', href: '/careers' },
-    { name: 'News & Insights', href: '/news' },
+    { name: 'About Us', href: '/' },
+    { name: 'Our Team', href: '/team' },
+    { name: 'Awards & Recognition', href: '/awards' },
     { name: 'Contact', href: '/contact' },
   ]
 
@@ -99,7 +98,7 @@ const Footer = () => {
               <div className="flex items-start">
                 <span className="font-medium mr-2">Address:</span>
                 <div className="flex-1">
-                  <div className="sm:whitespace-nowrap">Nora Chambers (Nora Legal Consultants LLP)</div>
+                  <div>Nora Chambers (Nora Legal Consultants LLP)</div>
                   <div>X-7, Hauz Khas, New Delhi 110016</div>
                 </div>
               </div>
