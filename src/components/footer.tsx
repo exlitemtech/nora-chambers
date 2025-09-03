@@ -133,7 +133,7 @@ const Footer = () => {
         <div className="border-t border-gray-700 py-6">
           <div className="flex flex-col lg:flex-row justify-between items-center">
             <p className="text-gray-400 text-sm mb-4 lg:mb-0">
-              &copy; {currentYear} Nora Chambers (Nora Legal Consultants LLP). All rights reserved. 'Nora Chambers' and its associated device are registered trademarks.
+              &copy; {currentYear} Nora Chambers (Nora Legal Consultants LLP). All rights reserved. &lsquo;Nora Chambers&rsquo; and its associated device are registered trademarks.
             </p>
             <div className="flex space-x-6 text-sm">
               <Link href="/privacy-policy" target='_blank' className="text-gray-400 hover:text-white transition-colors">
