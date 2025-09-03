@@ -1,5 +1,17 @@
-import { Partner } from '@/components/PartnerDetail'
-
+interface Partner {
+  slug: string
+  name: string
+  title: string
+  image: string
+  email: string
+  linkedin: string
+  specialization: string
+  bio: string
+  detailedBio?: string[]
+  education: string[]
+  barQualifications?: string[]
+  experience: string[]
+}
 const partnersData: Partner[] = [
   {
     slug: 'shouryendu-ray',
