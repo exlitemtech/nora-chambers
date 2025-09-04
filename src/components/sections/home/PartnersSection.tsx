@@ -25,21 +25,21 @@ export default function PartnersSection() {
         {
             name: 'Shouryendu Ray',
             title: 'Partner',
-            image: '/pictures/partners/sray.webp',
+            image: '/pictures/partners/sray_1.webp',
             specialization: 'Corporate Advisory & Commercial Litigation',
             slug: 'shouryendu-ray'
         },
         {
             name: 'Neelu Mohan',
             title: 'Partner',
-            image: '/pictures/partners/nm.webp',
+            image: '/pictures/partners/nm_1.webp',
             specialization: 'Commercial Litigation & Arbitration',
             slug: 'neelu-mohan'
         },
         {
             name: 'Dr. Manas S. Ray',
             title: 'Partner',
-            image: '/pictures/partners/msray.webp',
+            image: '/pictures/partners/msray_1.webp',
             specialization: 'Direct Tax, Securities Law & Financial Regulation',
             slug: 'ms-ray'
         }
