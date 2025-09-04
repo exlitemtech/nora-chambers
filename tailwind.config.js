@@ -15,8 +15,8 @@ module.exports = {
         accent: '#115960',
       },
       fontFamily: {
-        sans: ['Open Sans', 'sans-serif'],
-        serif: ['Playfair Display', 'serif'],
+        sans: ['Inter', 'sans-serif'],
+        serif: ['Georgia', 'serif'],
       },
     },
   },

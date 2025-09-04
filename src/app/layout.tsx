@@ -1,9 +1,16 @@
 import type { Metadata } from 'next'
-import { Open_Sans } from 'next/font/google'
+import { EB_Garamond } from 'next/font/google'
 import './globals.css'
 import { ThemeProvider } from '@/components/theme-provider'
+import Navigation from '@/components/navigation'
+import Footer from '@/components/footer'
 
-const openSans = Open_Sans({ subsets: ['latin'] })
+const garamond = EB_Garamond({ 
+  subsets: ['latin'],
+  variable: '--font-garamond',
+  display: 'swap',
+  fallback: ['serif']
+})
 
 export const metadata: Metadata = {
   title: 'Nora Chambers - Leading Law Firm in India',
@@ -17,14 +24,16 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${openSans.className} min-h-screen`} suppressHydrationWarning>
+      <body className={`${garamond.variable} min-h-screen`} suppressHydrationWarning>
         <ThemeProvider
           attribute="class"
           defaultTheme="light"
           enableSystem
           disableTransitionOnChange
         >
-          {children}
+            <Navigation />
+            {children}
+            <Footer />
         </ThemeProvider>
       </body>
     </html>

@@ -15,10 +15,9 @@ const Footer = () => {
   ]
 
   const quickLinks = [
-    { name: 'About Us', href: '/about' },
-    { name: 'Our Partners', href: '/about#partners' },
-    { name: 'Careers', href: '/careers' },
-    { name: 'News & Insights', href: '/news' },
+    { name: 'About Us', href: '/' },
+    { name: 'Our Team', href: '/team' },
+    { name: 'Awards & Recognition', href: '/awards' },
     { name: 'Contact', href: '/contact' },
   ]
 
@@ -38,9 +37,9 @@ const Footer = () => {
                 className="h-12 w-12"
               />
               <div className="w-px h-8 bg-gray-400"></div>
-              <div className="text-xl font-serif font-bold text-white">
+              <h3 className="text-lg font-bold text-white">
                 Nora Chambers
-              </div>
+              </h3>
             </div>
             <p className="text-gray-300 mb-6 text-sm leading-relaxed">
               Award-winning boutique law firm based in New Delhi specialising in dispute resolution and general corporate advisory.
@@ -96,26 +95,36 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-semibold mb-6">Contact</h3>
             <div className="text-gray-300 space-y-3 text-sm">
-              <p className="flex items-start">
+              <div className="flex items-start">
                 <span className="font-medium mr-2">Address:</span>
-                <span>New Delhi, India</span>
-              </p>
+                <div className="flex-1">
+                  <div>Nora Chambers (Nora Legal Consultants LLP)</div>
+                  <div>X-7, Hauz Khas, New Delhi 110016</div>
+                </div>
+              </div>
               <p className="flex items-start">
                 <span className="font-medium mr-2">Email:</span>
-                <a href="mailto:info@norachambers.com" className="hover:text-white transition-colors">
-                  info@norachambers.com
+                <a href="mailto:admin@norachambers.in" className="hover:text-white transition-colors">
+                  admin@norachambers.in
                 </a>
               </p>
               <p className="flex items-start">
                 <span className="font-medium mr-2">Phone:</span>
-                <a href="tel:+911100000000" className="hover:text-white transition-colors">
-                  +91 11 XXXX XXXX
+                <a href="tel:+91 1141075982" className="hover:text-white transition-colors">
+                  +91 11 4107 5982
+                </a>
+                <span className='mx-1'>,</span>
+                <a href="tel:+91 9953803458" className="hover:text-white transition-colors">
+                  +91 99538 03458
                 </a>
               </p>
-              <p className="flex items-start">
+              <div className="flex items-start">
                 <span className="font-medium mr-2">Hours:</span>
-                <span>Mon-Fri 9AM-6PM</span>
-              </p>
+                <div className="flex-1">
+                  <div className="sm:whitespace-nowrap">Mon-Sat: 10:30 AM - 7:30 PM</div>
+                  <div>Sun: Closed</div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -124,17 +133,14 @@ const Footer = () => {
         <div className="border-t border-gray-700 py-6">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-gray-400 text-sm mb-4 md:mb-0">
-              &copy; {currentYear} Nora Chambers. All rights reserved.
+              &copy; {currentYear} Nora Chambers (Nora Legal Consultants LLP). All rights reserved.
             </p>
             <div className="flex space-x-6 text-sm">
-              <Link href="#" className="text-gray-400 hover:text-white transition-colors">
+              <Link href="/privacy-policy" target='_blank' className="text-gray-400 hover:text-white transition-colors">
                 Privacy Policy
               </Link>
-              <Link href="#" className="text-gray-400 hover:text-white transition-colors">
+              <Link href="/terms-conditions" target='_blank' className="text-gray-400 hover:text-white transition-colors">
                 Terms of Service
-              </Link>
-              <Link href="#" className="text-gray-400 hover:text-white transition-colors">
-                Disclaimer
               </Link>
             </div>
           </div>

@@ -1,5 +1,3 @@
-import Navigation from '@/components/navigation'
-import Footer from '@/components/footer'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { Scale, Users, Shield, Award, Building, Gavel } from 'lucide-react'
 
@@ -75,9 +73,7 @@ export default function Services() {
 
   return (
     <div className="min-h-screen">
-      <Navigation />
-      
-      <div className="pt-24 md:pt-32 pb-12 bg-tertiary">
+      <div className="pt-24 md:pt-32 pb-12 bg-gradient-to-br from-primary/10 to-accent/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h1 className="text-4xl font-bold text-gray-900 mb-4">Areas of Practice</h1>
@@ -111,8 +107,6 @@ export default function Services() {
           </div>
         </div>
       </div>
-
-      <Footer />
     </div>
   )
 }
