@@ -1,9 +1,8 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import Image from 'next/image'
 import Link from 'next/link'
-import { Scale, Building, Shield, Cpu, BookOpen, Lock, Calculator, Briefcase, ArrowRight, Gavel, Users, Globe, Heart, Wrench } from 'lucide-react'
+import { Scale, Building, Cpu, BookOpen, Lock, Calculator, Briefcase, ArrowRight, Truck, Users, Globe, Heart, Wrench } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 
@@ -119,32 +118,32 @@ export default function PracticeAreas() {
     {
       title: 'Aviation',
       description: 'Comprehensive legal services for airlines, airports, and aviation industry stakeholders.',
-      icon: Globe,
-      areas: ['Aircraft financing and leasing', 'Regulatory compliance', 'Aviation disputes', 'Airport development']
+      icon: Globe
     },
     {
       title: 'Finance',
       description: 'Expert counsel for banks, NBFCs, fintech companies, and financial institutions.',
-      icon: Building,
-      areas: ['Banking regulations', 'Fintech compliance', 'Payment systems', 'Digital lending']
+      icon: Building
     },
     {
       title: 'Pharma & Health Care',
       description: 'Specialized legal services for pharmaceutical and healthcare companies.',
-      icon: Heart,
-      areas: ['Drug regulatory affairs', 'Clinical trials', 'IP protection', 'Healthcare compliance']
+      icon: Heart
     },
     {
       title: 'Construction & Heavy Engineering',
       description: 'Legal solutions for construction, infrastructure, and engineering projects.',
-      icon: Wrench,
-      areas: ['Project development', 'Construction disputes', 'EPC contracts', 'Infrastructure financing']
+      icon: Wrench
     },
     {
       title: 'SaaS & IT',
       description: 'Technology-focused legal services for software and IT companies.',
-      icon: Cpu,
-      areas: ['Software licensing', 'Data protection', 'Technology transfers', 'IT outsourcing']
+      icon: Cpu
+    },
+    {
+      title: 'Mobility & Logistics',
+      description: 'Serving the automotive, aviation, shipping, and transportation industries.',
+      icon: Truck
     }
   ]
 
@@ -270,16 +269,6 @@ export default function PracticeAreas() {
                       {sector.description}
                     </CardDescription>
                   </CardHeader>
-                  <CardContent>
-                    <div className="space-y-2">
-                      {sector.areas.map((area, i) => (
-                        <div key={i} className="flex items-start">
-                          <ArrowRight className="w-4 h-4 text-primary mt-0.5 mr-2 flex-shrink-0" />
-                          <span className="text-gray-700 text-sm">{area}</span>
-                        </div>
-                      ))}
-                    </div>
-                  </CardContent>
                 </Card>
               </motion.div>
             ))}
