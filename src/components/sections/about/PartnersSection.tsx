@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion'
 import Image from 'next/image'
-import { Mail, Linkedin, GraduationCap, Briefcase, Scale, ArrowRight } from 'lucide-react'
+import { Mail, Linkedin, GraduationCap, Briefcase, Scale, MoveDown, MoveUp } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { getAllPartners } from '@/lib/partnersData'
 import { useState } from 'react'
@@ -61,16 +61,19 @@ export default function PartnersSection() {
                     
                     {/* Brief intro - first paragraph or bio */}
                     <div className="text-gray-600 mb-8 leading-relaxed">
-                      <p className={expandedBios[index] ? '' : 'line-clamp-4'}>
+                      <p className={expandedBios[index] ? '' : 'line-clamp-4 md:line-clamp-none'}>
                         {partner.detailedBio ? partner.detailedBio[0] : partner.bio}
                       </p>
                       {(partner.detailedBio ? partner.detailedBio[0] : partner.bio).length > 200 && (
                         <button
                           onClick={() => setExpandedBios(prev => ({ ...prev, [index]: !prev[index] }))}
-                          className="text-primary hover:text-primary/80 text-sm font-medium mt-2 flex items-center gap-1"
+                          className="text-primary hover:text-primary/80 text-sm font-medium mt-2 flex items-center gap-1 md:hidden"
                         >
                           {expandedBios[index] ? 'Read less' : 'Read more'}
-                          <ArrowRight className={`w-3 h-3 transition-transform ${expandedBios[index] ? 'rotate-90' : ''}`} />
+                          {expandedBios[index] ? 
+                            <MoveUp className="w-3 h-3" /> : 
+                            <MoveDown className="w-3 h-3" />
+                          }
                         </button>
                       )}
                     </div>
