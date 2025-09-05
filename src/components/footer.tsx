@@ -42,7 +42,7 @@ const Footer = () => {
               </h3>
             </div>
             <p className="text-gray-300 mb-6 text-sm leading-relaxed">
-              Award-winning boutique law firm based in New Delhi specialising in dispute resolution and general corporate advisory.
+              Award-winning boutique law firm based in New Delhi specialising in dispute resolution, direct tax and general corporate advisory.
             </p>
             <div className="flex space-x-4">
               <a href="#" className="text-gray-300 hover:text-white transition-colors">
