@@ -286,9 +286,6 @@ export default function PracticeAreas() {
             transition={{ duration: 0.8 }}
             className="text-center"
           >
-            <h2 className="text-3xl md:text-4xl font-serif font-bold text-gray-900 mb-6">
-              Need Legal Counsel?
-            </h2>
             <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
               Contact our experienced legal team to discuss how we can assist with your 
               specific legal requirements and business objectives.
