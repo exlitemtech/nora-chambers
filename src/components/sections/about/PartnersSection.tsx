@@ -2,13 +2,14 @@
 
 import { motion } from 'framer-motion'
 import Image from 'next/image'
-import Link from 'next/link'
-import { Mail, Linkedin, GraduationCap, Briefcase, Scale, ArrowRight } from 'lucide-react'
+import { Mail, Linkedin, GraduationCap, Briefcase, Scale, MoveDown, MoveUp } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { getAllPartners } from '@/lib/partnersData'
+import { useState } from 'react'
 
 export default function PartnersSection() {
   const partners = getAllPartners()
+  const [expandedBios, setExpandedBios] = useState<{[key: number]: boolean}>({})
 
   return (
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -59,9 +60,23 @@ export default function PartnersSection() {
                     <p className="text-lg text-primary font-medium mb-6">{partner.specialization}</p>
                     
                     {/* Brief intro - first paragraph or bio */}
-                    <p className="text-gray-600 mb-8 leading-relaxed line-clamp-5">
-                      {partner.detailedBio ? partner.detailedBio[0] : partner.bio}
-                    </p>
+                    <div className="text-gray-600 mb-8 leading-relaxed">
+                      <p className={expandedBios[index] ? '' : 'line-clamp-4 md:line-clamp-none'}>
+                        {partner.detailedBio ? partner.detailedBio[0] : partner.bio}
+                      </p>
+                      {(partner.detailedBio ? partner.detailedBio[0] : partner.bio).length > 200 && (
+                        <button
+                          onClick={() => setExpandedBios(prev => ({ ...prev, [index]: !prev[index] }))}
+                          className="text-primary hover:text-primary/80 text-sm font-medium mt-2 flex items-center gap-1 md:hidden"
+                        >
+                          {expandedBios[index] ? 'Read less' : 'Read more'}
+                          {expandedBios[index] ? 
+                            <MoveUp className="w-3 h-3" /> : 
+                            <MoveDown className="w-3 h-3" />
+                          }
+                        </button>
+                      )}
+                    </div>
 
                     {/* Contact Buttons */}
                     <div className="flex gap-4">

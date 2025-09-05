@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion'
 import Link from 'next/link'
-import { ArrowLeft, Shield, Lock, Eye, Users, Cookie, Server, ExternalLink, Mail, Phone } from 'lucide-react'
+import { Shield, Mail, Phone } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 
 export default function PrivacyPolicy() {
@@ -242,7 +242,15 @@ export default function PrivacyPolicy() {
                     <Phone className="w-5 h-5 text-primary" />
                     <div>
                       <p className="font-semibold text-gray-900">Telephone:</p>
-                      <p className="text-gray-700">+91-11-XXXX-XXXX</p>
+                      <p className="text-gray-700">
+                        <a href="tel:+91 11 4107 5982" className="text-gray-700 hover:text-gray-900">
+                          +91 11 4107 5982
+                        </a>
+                        <br />
+                        <a href="tel:+91 99538 03458" className="text-gray-700 hover:text-gray-900">
+                          +91 99538 03458
+                        </a>
+                      </p>
                     </div>
                   </div>
                 </div>
